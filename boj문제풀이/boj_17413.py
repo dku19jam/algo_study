@@ -3,48 +3,26 @@ import sys
 s = sys.stdin.readline().rstrip()
 
 temp = ""
+tag = False
+answer = ""
 
-start = 0
-end = 0
+for i in s:
+    if not tag:
+        if i == "<":
+            temp += i
+            tag = True
+        elif i == " ":
+            temp += i
+            answer += temp
+            temp = ""
+        else:
+            temp = i + temp
+    else:
+        temp += i
+        if i == ">":
+            tag = False
+            answer += temp
+            temp = ""
 
-for i in range(len(s)):
-    if s[i] == "<":
-        start = i
-
-    elif s[i] == ">":
-        end = i
-        print(s[start:end+1])
-
-    if s[i] != "<":
-        if i == 0:
-            r_start = i
-            s_start = r_start
-        elif s[i-1] == ">":
-            r_start = i
-            s_start = r_start
-
-    elif s[i] != ">":
-        cnt = 0
-        if i == len(s)-1:
-            r_end = i
-            for j in range(r_start, r_end+1):
-                if s[j] == " ":
-                    cnt += 1
-                    for r in range(j, s_start-1, -1):
-                        print(s[r], end="")
-            if cnt == 0:
-                for r in range(r_end,r_start-1,-1):
-                    print(s[r], end="")
-        elif s[i+1] == "<":
-            r_end = i
-            for j in range(r_start, r_end+1):
-                if s[j] == " ":
-                    cnt += 1
-                    for r in range(j, s_start-1, -1):
-                        print(s[r], end="")
-            if cnt == 0:
-                for r in range(r_end,r_start-1,-1):
-                    print(s[r], end="")
-
-
+print(answer+temp)
 
