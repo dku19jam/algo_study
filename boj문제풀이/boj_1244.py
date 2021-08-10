@@ -44,3 +44,5 @@ for x in range(n):
         print(switch[x])
     else:
         print(switch[x], end=" ")
+
+

@@ -9,8 +9,8 @@ for _ in range(N):
 meet = sorted(meet, key=lambda a: a[0])
 meet = sorted(meet, key=lambda a: a[1])
 
-last=0
-cnt=0
+last = 0
+cnt = 0
 
 for i, j in meet:
     if i >= last:

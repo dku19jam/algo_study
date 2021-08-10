@@ -6,7 +6,7 @@ cnt2 = 0
 answer1 = ""
 answer2 = ""
 
-for i in range(len(n)): #가장 큰
+for i in range(len(n)):   # 가장 큰
     if n[i] == "M":
         cnt1 += 1
     else:
@@ -15,7 +15,7 @@ for i in range(len(n)): #가장 큰
 if cnt1 != 0:
     answer1 += "1" * cnt1
 
-if n[0] == "K":   #가장 작은
+if n[0] == "K":   # 가장 작은
     answer2 += "5"
 else:
     answer2 += "1"

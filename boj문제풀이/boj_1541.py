@@ -10,7 +10,7 @@ for i in num:
         cnt += int(j)
     minus.append(cnt)
 
-answer=minus[0]
+answer = minus[0]
 
 for i in range(1, len(num)):
     answer -= minus[i]
