@@ -8,7 +8,7 @@ for i in range(M):
     s[y][x] = 1
 
 def dfs(V):
-    print(V,end=' ')
+    print(V, end=' ')
     visit[V] = 1
     for i in range(1,N+1):
         if visit[i] == 0 and s[V][i] == 1:

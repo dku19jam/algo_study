@@ -12,4 +12,4 @@ for _ in range(n):
         else:
             print(heapq.heappop(arr))
     else:
-        heapq.heappush(arr,num)
+        heapq.heappush(arr, num)
