@@ -12,8 +12,8 @@ for i in range(m):
     indegree[b] += 1
     graph[a].append(b)
 
-dq= deque()
-for i in range(1,n+1):
+dq = deque()
+for i in range(1, n+1):
     if indegree[i] == 0:
         dq.append(i)
         answer[i] = 1
