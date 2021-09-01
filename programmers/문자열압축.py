@@ -2,7 +2,7 @@ def solution(s):
     result = []
     if len(s) == 1:
         return 1
-    for i in range(1,len(s)//2 + 1):
+    for i in range(1, len(s)//2 + 1):
         st = ''
         cnt = 1
         temp = s[:i]
