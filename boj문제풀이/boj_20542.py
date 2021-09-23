@@ -9,7 +9,7 @@ answer = sys.stdin.readline().rstrip()
 dp = [[0 for _ in range(m+1)] for _ in range(n+1)]
 
 
-def correct(a,b):
+def correct(a, b):
     if a == b:
         return True
     elif a == "i" and (b == 'i' or b == 'j' or b == 'l'):
